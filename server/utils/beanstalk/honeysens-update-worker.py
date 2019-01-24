@@ -85,6 +85,7 @@ while True:
     # 18.12.01 -> NG
     if config_version == '18.12.01':
         print('Upgrading configuration: 18.12.01 -> NG')
+        config.set('smtp', 'port', '25')
         config.set('server', 'config_version', 'NG')
         config_version = 'NG'
 
