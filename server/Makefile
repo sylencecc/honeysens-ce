@@ -1,6 +1,8 @@
 PREFIX := HoneySens-Server
 REVISION := 18.12.01
 OUTDIR := out
+# (watch|simple-watch|chokidar)
+export DEV_WATCH_TASK := chokidar
 
 dist: ${OUTDIR}/dist/${PREFIX}-${REVISION}.tar
 
