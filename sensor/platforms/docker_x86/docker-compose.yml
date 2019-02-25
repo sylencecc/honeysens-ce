@@ -1,7 +1,6 @@
 services:
   sensor:
     environment:
-    - CONFIG_FILE
     - PREV_PREFIX
     - HOST_PWD
     image: honeysens/sensorx86:18.12.01
