@@ -86,6 +86,8 @@ while True:
     if config_version == '18.12.01':
         print('Upgrading configuration: 18.12.01 -> NG')
         config.set('smtp', 'port', '25')
+        config.set('sensors', 'service_network', '10.10.10.0/24')
+        db.cursor().execute('ALTER TABLE sensors ADD serviceNetwork VARCHAR(255) DEFAULT NULL')
         config.set('server', 'config_version', 'NG')
         config_version = 'NG'
 
