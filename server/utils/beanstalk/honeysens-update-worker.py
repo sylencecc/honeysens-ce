@@ -87,8 +87,14 @@ while True:
         print('Upgrading configuration: 18.12.01 -> NG')
         config.set('smtp', 'port', '25')
         config.set('sensors', 'service_network', '10.10.10.0/24')
-        db.cursor().execute('ALTER TABLE sensors ADD serviceNetwork VARCHAR(255) DEFAULT NULL')
-        db.cursor().execute('ALTER TABLE statuslogs ADD serviceStatus VARCHAR(255) DEFAULT NULL')
+        db_statements = [
+            'ALTER TABLE sensors ADD serviceNetwork VARCHAR(255) DEFAULT NULL',
+            'ALTER TABLE statuslogs ADD serviceStatus VARCHAR(255) DEFAULT NULL',
+            'ALTER TABLE users ADD legacyPassword VARCHAR(255) DEFAULT NULL, CHANGE password password VARCHAR(255) DEFAULT NULL',
+            'UPDATE users SET legacyPassword=password,password=NULL'
+        ]
+        execute_sql(db, db_statements)
+        db.commit()
         config.set('server', 'config_version', 'NG')
         config_version = 'NG'
 
