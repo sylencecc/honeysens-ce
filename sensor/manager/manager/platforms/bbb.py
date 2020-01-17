@@ -110,11 +110,12 @@ class Platform(GenericPlatform):
             return
         req_time = r['headers']['date']
         t = time.localtime(time.mktime(time.strptime(req_time, '%a, %d %b %Y %H:%M:%S %Z')) - time.timezone)
-        subprocess.call(['date', '-s', time.strftime('%Y/%m/%d %H:%M:%S', t)])
+        with open(os.devnull, 'w') as devnull:
+            subprocess.call(['date', '-s', time.strftime('%Y/%m/%d %H:%M:%S', t)], stdout=devnull)
 
     def update(self, config, server_response, reset_network):
         # Don't update if an update is already running
-        if self.is_update_in_progress():
+        if self.is_firmware_update_in_progress():
             self.logger.warning('Firmware update already scheduled')
             return
         if 'firmware' in server_response and 'bbb' in server_response['firmware']:
@@ -124,7 +125,7 @@ class Platform(GenericPlatform):
             if current_revision != target_revision:
                 tempdir = tempfile.mkdtemp()
                 try:
-                    self.set_update_in_progress(True)
+                    self.set_firmware_update_in_progress(True)
                     self.logger.info('Update: Current revision {} differs from target {}, attempting update'.format(current_revision, target_revision))
                     self.logger.info('Update: Removing all containers to free some space')
                     services.destroy_all()
@@ -169,4 +170,4 @@ class Platform(GenericPlatform):
                 except Exception as e:
                     self.logger.error('Error during update process ({})'.format(e.message))
                     shutil.rmtree(tempdir)
-                    self.set_update_in_progress(False)
+                    self.set_firmware_update_in_progress(False)
