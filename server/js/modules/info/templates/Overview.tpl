@@ -4,7 +4,7 @@
         <dt>Plattform</dt>
         <dd>HoneySens CE</dd>
         <dt>Revision</dt>
-        <dd>18.12.01</dd>
+        <dd>20.01.01</dd>
         <dt>Lizenz</dt>
         <dd><a href="https://www.apache.org/licenses/LICENSE-2.0.html" target="_blank">Apache 2.0 Software License</a></dd>
         <dt>Entwicklung</dt>
@@ -45,7 +45,19 @@
             </div>
             <div id="releasenotes" class="panel-collapse collapse">
                 <div class="panel-body">
-                	<span class="glyphicon glyphicon-record"></span>&nbsp;&nbsp;<strong>Revision 18.12.01</strong><br/>
+                    <span class="glyphicon glyphicon-record"></span>&nbsp;&nbsp;<strong>Revision 20.01.01</strong><br/>
+                    <p>
+                        <ul>
+                            <li>Diensteverwaltung in der Sensor&uuml;bersicht &uuml;berarbeitet</li>
+                            <li>Zus&auml;tzliche Such-, Filter und Sortierfunktionen f&uuml;r die Ereignis&uuml;bersicht</li>
+                            <li>&Uuml;berarbeitung der clientseitigen Formularvalidierung</li>
+                            <li>Interner Netzbereich f&uuml;r Honeypot-Services ist nun frei definierbar</li>
+                            <li>Verfahren zur Verl&auml;ngerung der Zertifikatinfrastruktur hinzugef&uuml;gt</li>
+                            <li>E-Mail-Konfiguration erlaubt nun die freie Bestimmung des zu nutzenden SMTP-Ports</li>
+                        </ul>
+                    </p>
+                    <hr />
+                    <span class="glyphicon glyphicon-record"></span>&nbsp;&nbsp;<strong>Revision 18.12.01</strong><br/>
                     <p>Initiales Release der Community Edition</p>
                 </div>
             </div>

@@ -1,13 +1,17 @@
 <?xml version='1.0' standalone='yes'?>
 <firmware>
-    <name>HoneySens Docker Firmware</name>
-    <platform>docker_x86</platform>
-    <version>$REVISION</version>
-    <description>Dockerized sensor platform to be used on generic x86 systems</description>
-    <changelog>
-        <entry>
-            <version>18.12.01</version>
-            <desc>Support for remote certificate updates</desc>
-        </entry>
-    </changelog>
+  <name>HoneySens Docker Firmware</name>
+  <platform>docker_x86</platform>
+  <version>$REVISION</version>
+  <description>Dockerized sensor platform to be used on generic x86 systems</description>
+  <changelog>
+    <entry>
+      <version>20.01.01</version>
+      <desc>Supports event caching, remote certificate updates and an adjustable internal sensor network range</desc>
+    </entry>
+    <entry>
+      <version>18.12.01</version>
+      <desc>Initial Community Edition Release</desc>
+    </entry>
+  </changelog>
 </firmware>

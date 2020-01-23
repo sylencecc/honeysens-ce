@@ -82,9 +82,9 @@ while True:
         print('Creating update marker as {}'.format(marker_path))
         open(marker_path, 'w+')
 
-    # 18.12.01 -> NG
+    # 18.12.01 -> 20.01.01
     if config_version == '18.12.01':
-        print('Upgrading configuration: 18.12.01 -> NG')
+        print('Upgrading configuration: 18.12.01 -> 20.01.01')
         config.set('smtp', 'port', '25')
         config.set('sensors', 'service_network', '10.10.10.0/24')
         db_statements = [
@@ -95,8 +95,8 @@ while True:
         ]
         execute_sql(db, db_statements)
         db.commit()
-        config.set('server', 'config_version', 'NG')
-        config_version = 'NG'
+        config.set('server', 'config_version', '20.01.01')
+        config_version = '20.01.01'
 
     # Write new config file
     with open(sys.argv[1], 'wb') as f:

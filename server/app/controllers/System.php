@@ -13,7 +13,7 @@ use Respect\Validation\Validator as V;
 
 class System extends RESTResource {
 
-    const VERSION = '18.12.01';
+    const VERSION = '20.01.01';
     const ERR_UNKNOWN = 0;
     const ERR_CONFIG_WRITE = 1;
 
