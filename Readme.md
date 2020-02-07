@@ -30,7 +30,7 @@ Detailed build and deployment instructions for all components can be found in th
 * [Services](sensor/services/Readme.md)
 
 ## Contributors
-HoneySens initially started out as a diploma thesis and emerged later into a joint project between the [Technische Universität Dresden](https://tu-dresden.de/), the [Ministry of Interior](http://www.smi.sachsen.de/) of Saxony (Germany) and [T-Systems Multimedia Solutions](https://www.t-systems-mms.com/).
+HoneySens initially started out as a diploma thesis and emerged later into a joint project between the [Technische Universität Dresden](https://tu-dresden.de/), [SID](https://www.sid.sachsen.de/) (Staatsbetrieb S&auml;chsische Informatik Dienste) and [T-Systems Multimedia Solutions](https://www.t-systems-mms.com/).
 
 ## License
 HoneySens Community Edition is licensed under [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
